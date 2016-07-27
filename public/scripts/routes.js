@@ -34,7 +34,13 @@ define(['angular', 'angular-ui-router'], function (angular) {
         url: '/dashboards',
         templateUrl: 'views/dashboards.html',
         controller: 'DashboardsCtrl'
-      });
+      })
+      .state('map', {
+        parent: 'secure',
+        url: '/map',
+        templateUrl: 'views/map.html'
+      })
+    ;
 
 
     $urlRouterProvider.otherwise(function ($injector) {

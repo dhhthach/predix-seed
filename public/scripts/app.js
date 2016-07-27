@@ -41,7 +41,8 @@ define([
             name: 'Predix Seed',
             session: {},
             tabs: [
-                {icon: 'fa-tachometer', label: 'Dashboards', state: 'dashboards'}
+                {icon: 'fa-tachometer', label: 'Dashboards', state: 'dashboards'},
+                {icon: 'fa-tachometer', label: 'Troll Map', state: 'map'}
             ]
         };
 
@@ -59,6 +60,11 @@ define([
             else {
                 // unexpected error
             }
+        });
+
+        $rootScope.$on('$stateChangeSuccess', function (event, state) {
+            var navEl = document.querySelector('px-app-nav');
+            navEl.markSelected(state);
         });
     }]);
 
