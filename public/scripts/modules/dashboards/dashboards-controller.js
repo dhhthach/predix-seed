@@ -150,6 +150,13 @@ define(['angular', './dashboards-module'], function (angular, controllers) {
           pointPadding: 0
         }
       },
+      navigator: {
+        enabled: true,
+        series: {
+          lineWidth: 0,
+          fillOpacity: 0
+        }
+      },
       series: [{
         name: 'SEM OK',
         data: series[2],
