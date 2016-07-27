@@ -23,7 +23,9 @@ define([
         'app.interceptors',
         'sample.module',
         'predix.datasource',
-        'px.ngBindPolymer'
+        'px.ngBindPolymer',
+        'dashboards.module',
+        'ui.bootstrap'
     ]);
 
     /**
@@ -39,10 +41,7 @@ define([
             name: 'Predix Seed',
             session: {},
             tabs: [
-                {icon: 'fa-tachometer', state: 'dashboards', label: 'Dashboards'},
-                {icon: 'fa-file-o', state: 'blankpage', label: 'Blank Page', subitems: [
-                    {state: 'blanksubpage', label: 'Blank Sub Page'}
-                ]}
+                {icon: 'fa-tachometer', label: 'Dashboards', state: 'dashboards'}
             ]
         };
 

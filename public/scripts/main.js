@@ -1,3 +1,6 @@
-define(['modules/sample-module/main'], function() {
+define([
+  'modules/sample-module/main',
+  'modules/dashboards/main'
+], function() {
 
 });
